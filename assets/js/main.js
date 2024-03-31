@@ -257,9 +257,9 @@
   }
 
   /**
-   * Clients Slider
+   * Notification Slider
    */
-  new Swiper('.clients-slider', {
+  new Swiper('.notification-slider', {
     speed: 400,
     loop: true,
     autoplay: {
