@@ -161,7 +161,7 @@ h6 {
 #header.header-inner-pages {
   /* background: rgba(0, 0, 0, 0.8); */
   background: rgba(0, 0, 0, 0.5);
-  box-shadow: 0 8px 32px 0 rgba(116, 50, 187, .4);
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.4);
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
 }
