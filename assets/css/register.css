@@ -38,11 +38,12 @@
 
 .file-preview__item .remove-file {
   position: absolute;
-  top: -5px;
-  right: -5px;
+  top: -15px;
+  right: -15px;
   background-color: #fff;
   border: 1px solid #ccc;
   border-radius: 50%;
-  padding: 2px;
+  padding: 0px 8px;
   cursor: pointer;
+  color: #000;
 }
