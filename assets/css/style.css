@@ -4,14 +4,14 @@
 body {
   font-family: "Open Sans", sans-serif;
   background-color: #1367A6;
-  background: url("../img/bg/bokeh.png"), rgba(19, 102, 166, 0.8)repeat;
+  background: url("../img/bg/bokeh.png"), rgba(19, 102, 166, .9) repeat;
   background-position: center;
   background-size: 100vw auto;
-  color: #000000;
+  color: #FFFFFF;
 }
 
 a {
-  color: #51d9ff;
+  color: #A755FF;
   text-decoration: none;
 }
 
@@ -40,14 +40,14 @@ h6 {
   right: 15px;
   bottom: 15px;
   z-index: 996;
-  background: rgba(0, 200, 255, 0.5);
+  background: rgba(0, 200, 255, .5);
   box-shadow: 0 8px 32px 0 rgba(116, 50, 187, .4);
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
   width: 40px;
   height: 40px;
   border-radius: 4px;
-  transition: all 0.4s;
+  transition: all .4s;
 }
 
 .back-to-top i {
@@ -57,14 +57,14 @@ h6 {
 }
 
 .back-to-top:hover {
-  background: rgba(0, 0, 0, 0.5);
+  background: rgba(0, 0, 0, .5);
   box-shadow: 0 8px 32px 0 rgba(116, 50, 187, .4);
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
 }
 
 .back-to-top:hover i {
-  color: #51d9ff;
+  color: #A755FF;
 }
 
 .back-to-top.active {
@@ -152,16 +152,16 @@ h6 {
 # Header
 --------------------------------------------------------------*/
 #header {
-  transition: all 0.5s;
+  transition: all .5s;
   z-index: 997;
   padding: 15px 0;
 }
 
 #header.header-scrolled,
 #header.header-inner-pages {
-  /* background: rgba(0, 0, 0, 0.8); */
-  background: rgba(0, 0, 0, 0.5);
-  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.4);
+  /* background: rgba(0, 0, 0, .8); */
+  background: rgba(0, 0, 0, 0.3);
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.3);
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
 }
@@ -177,11 +177,11 @@ h6 {
 }
 
 #header .logo a {
-  color: #fff;
+  color: #FFFFFF;
 }
 
 #header .logo a span {
-  color: #51d9ff;
+  color: #A755FF;
 }
 
 #header .logo img {
@@ -198,19 +198,19 @@ h6 {
 #  Get Started Button
 --------------------------------------------------------------*/
 .get-started-btn {
-  color: #fff;
+  color: #FFFFFF;
   border-radius: 4px;
   padding: 7px 25px 8px 25px;
   white-space: nowrap;
-  transition: 0.3s;
+  transition: .3s;
   font-size: 14px;
   display: inline-block;
-  border: 2px solid #51d9ff;
+  border: 2px solid #A755FF;
 }
 
 .get-started-btn:hover {
   background: #38c0ff;
-  color: #343a40;
+  color: #343A40;
 }
 
 @media (max-width: 992px) {
@@ -250,9 +250,9 @@ h6 {
   padding: 10px 0 10px 30px;
   font-size: 15px;
   font-weight: 600;
-  color: #fff;
+  color: #FFFFFF;
   white-space: nowrap;
-  transition: 0.3s;
+  transition: .3s;
 }
 
 .navbar a i,
@@ -266,7 +266,7 @@ h6 {
 .navbar .active,
 .navbar .active:focus,
 .navbar li:hover>a {
-  color: #51d9ff;
+  color: #A755FF;
 }
 
 .navbar .dropdown ul {
@@ -279,9 +279,9 @@ h6 {
   z-index: 99;
   opacity: 0;
   visibility: hidden;
-  background: #fff;
-  box-shadow: 0px 0px 30px rgba(127, 137, 161, 0.25);
-  transition: 0.3s;
+  background: #FFFFFF;
+  box-shadow: 0px 0px 30px rgba(127, 137, 161, .25);
+  transition: .3s;
 }
 
 .navbar .dropdown ul li {
@@ -303,7 +303,7 @@ h6 {
 .navbar .dropdown ul a:hover,
 .navbar .dropdown ul .active:hover,
 .navbar .dropdown ul li:hover>a {
-  background-color: #51d9ff;
+  background-color: #A755FF;
 }
 
 .navbar .dropdown:hover>ul {
@@ -339,12 +339,12 @@ h6 {
 * Mobile Navigation 
 */
 .mobile-nav-toggle {
-  color: #fff;
+  color: #FFFFFF;
   font-size: 28px;
   cursor: pointer;
   display: none;
   line-height: 0;
-  transition: 0.5s;
+  transition: .5s;
 }
 
 @media (max-width: 992px) {
@@ -364,7 +364,7 @@ h6 {
   right: 0;
   left: 0;
   bottom: 0;
-  transition: 0.3s;
+  transition: .3s;
   z-index: 999;
   height: 100vh;
   width: 100vw;
@@ -385,11 +385,11 @@ h6 {
   left: 15px;
   padding: 10px 0;
   border-radius: 10px;
-  background: rgba(255, 255, 255, 0.7);
+  background: rgba(255, 255, 255, .7);
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
   overflow-y: auto;
-  transition: 0.3s;
+  transition: .3s;
 }
 
 .navbar-mobile a,
@@ -403,7 +403,7 @@ h6 {
 .navbar-mobile .active,
 .navbar-mobile li:hover>a {
   color: #151515;
-  background-color: #51d9ff;
+  background-color: #A755FF;
 }
 
 .navbar-mobile .getstarted,
@@ -419,8 +419,8 @@ h6 {
   z-index: 99;
   opacity: 1;
   visibility: visible;
-  background: #fff;
-  box-shadow: 0px 0px 30px rgba(127, 137, 161, 0.25);
+  background: #FFFFFF;
+  box-shadow: 0px 0px 30px rgba(127, 137, 161, .25);
 }
 
 .navbar-mobile .dropdown ul li {
@@ -439,7 +439,7 @@ h6 {
 .navbar-mobile .dropdown ul a:hover,
 .navbar-mobile .dropdown ul .active:hover,
 .navbar-mobile .dropdown ul li:hover>a {
-  background-color: #51d9ff;
+  background-color: #A755FF;
 }
 
 .navbar-mobile .dropdown>.dropdown-active {
@@ -449,11 +449,20 @@ h6 {
 /*--------------------------------------------------------------
 # Hero Section
 --------------------------------------------------------------*/
-/* #particles-js {
-  background-image: url("../img/1about.png");
+#particles-js {
+  background-color: #000609;
+  background-image: url("../img/bg/earthing.jpg");
   background-repeat: no-repeat;
-  background-position: left bottom;
-} */
+  background-position: center left;
+  background-size: contain;
+  background-repeat: no-repeat;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
 
 #hero {
   width: 100%;
@@ -518,16 +527,15 @@ h6 {
   font-size: 56px;
   font-weight: 700;
   line-height: 64px;
-  color: #fff;
   font-family: "Exo", sans-serif;
 }
 
 #hero h1 span {
-  color: #51d9ff;
+  color: #A755FF;
 }
 
 #hero h2 {
-  color: rgba(255, 255, 255, 0.9);
+  color: rgba(255, 255, 255, .9);
   margin: 10px 0 0 0;
   font-size: 24px;
 }
@@ -595,7 +603,6 @@ section {
   margin: 0 0 5px 0;
   letter-spacing: 2px;
   text-transform: uppercase;
-  color: #FFFFFF;
   font-family: "Exo", sans-serif;
 }
 
@@ -612,37 +619,40 @@ section {
   margin: 0;
   margin: 0;
   font-size: 36px;
+  line-height: 40px;
   font-weight: 700;
   text-transform: uppercase;
   font-family: "Exo", sans-serif;
   color: #FFFFFF;
-  background: linear-gradient(0deg, #ff00e6, #0044ff, #ff00e6);
+  background: linear-gradient(0deg, #FF00E6, #0044FF, #FF00E6);
   background-size: 200% 200%;
   -webkit-background-clip: text;
   -webkit-text-stroke: 4px transparent;
+  text-shadow: 0px -5px 25px rgba(255, 0, 230, 0.7)
 }
 
 .section-content {
   padding: 30px 25px;
   margin-bottom: 10px;
-  background: rgba(255, 255, 255, 0.25);
+  background: rgba(255, 255, 255, .2);
   box-shadow: 0 8px 32px 0 rgba(116, 50, 187, .4);
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
   border-radius: 10px;
-  border: 1px solid rgba(255, 255, 255, 0.18);
+  border: 1px solid rgba(255, 255, 255, .2);
+}
+
+@media screen and (max-width: 768px) {
+  .section-content {
+    padding: 20px 15px;
+  }
 }
 
 /*--------------------------------------------------------------
 # About
 --------------------------------------------------------------*/
 #about {
-  background-color: #000609;
-  background-image: url("../img/bg/earthing.jpg");
-  background-position: center left;
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
+  position: relative;
   color: #FFFFFF;
 }
 
@@ -751,7 +761,7 @@ section {
 
 .prizes .prize-content {
   padding: 10px 30px;
-  background-color: rgba(116, 50, 187, 0.5);
+  background-color: rgba(116, 50, 187, .5);
   background: linear-gradient(90deg, rgba(98, 63, 164, .5), rgba(116, 50, 187, .5), rgba(99, 63, 164, .5));
   box-shadow: 0 8px 32px 0 rgba(116, 50, 187, .4);
   backdrop-filter: blur(3px);
@@ -765,23 +775,23 @@ section {
 
 .prizes .content {
   padding: 30px 0;
-  background: rgba(255, 255, 255, 0.25);
+  background: rgba(255, 255, 255, .25);
   box-shadow: 0 8px 32px 0 rgba(116, 50, 187, .4);
   backdrop-filter: blur(3px);
   -webkit-backdrop-filter: blur(3px);
   border-radius: 10px;
-  border: 1px solid rgba(255, 255, 255, 0.18);
+  border: 1px solid rgba(255, 255, 255, .18);
 }
 
-.prizes h3 {
-  margin-top: -35px;
+.prizes h1 {
+  margin-top: -30px;
   font-weight: 800;
   color: #FFFFFF;
 }
 
 #prizes .img-prize {
   width: 300px;
-  /* opacity: 0.5; */
+  /* opacity: .5; */
 }
 
 #prizes .prize {
@@ -793,6 +803,7 @@ section {
 --------------------------------------------------------------*/
 .problem-statements {
   padding: 80px 0;
+  color: #FFFFFF;
 }
 
 .problem-statements .section-header {
@@ -801,6 +812,11 @@ section {
 
 .problem-statements h3 {
   font-weight: 700;
+}
+
+.problem-statements h4 {
+  font-weight: 700;
+  margin-bottom: 0;
 }
 
 .problem-statements h5:hover {
@@ -827,17 +843,17 @@ section {
 
 .problem-statements .collapsed .icon-show {
   display: inline-block;
-  transition: 0.6s;
+  transition: .6s;
 }
 
 .problem-statements .collapsed .icon-close {
   display: none;
-  transition: 0.6s;
+  transition: .6s;
 }
 
 .problem-statements .badge-light {
   color: #000;
-  background-color: rgba(255, 255, 255, 0.3);
+  background-color: rgba(255, 255, 255, .3);
 }
 
 /*--------------------------------------------------------------
@@ -845,7 +861,7 @@ section {
 --------------------------------------------------------------*/
 .register .php-email-form {
   width: 100%;
-  background: #fff;
+  background: #FFFFFF;
 }
 
 .register .php-email-form .form-group {
@@ -854,7 +870,7 @@ section {
 
 .register .php-email-form .error-message {
   display: none;
-  color: #fff;
+  color: #FFFFFF;
   background: #ed3c0d;
   text-align: left;
   padding: 15px;
@@ -867,7 +883,7 @@ section {
 
 .register .php-email-form .sent-message {
   display: none;
-  color: #fff;
+  color: #FFFFFF;
   background: #18d26e;
   text-align: center;
   padding: 15px;
@@ -876,7 +892,7 @@ section {
 
 .register .php-email-form .loading {
   display: none;
-  background: #fff;
+  background: #FFFFFF;
   text-align: center;
   padding: 15px;
 }
@@ -903,7 +919,7 @@ section {
 
 .register .php-email-form input:focus,
 .register .php-email-form textarea:focus {
-  border-color: #51d9ff;
+  border-color: #A755FF;
 }
 
 .register .php-email-form input {
@@ -915,11 +931,11 @@ section {
 }
 
 .register .php-email-form button[type=submit] {
-  background: #51d9ff;
+  background: #A755FF;
   border: 0;
   padding: 10px 24px;
   color: #151515;
-  transition: 0.4s;
+  transition: .4s;
   border-radius: 4px;
 }
 
@@ -974,7 +990,7 @@ section {
   padding-left: 25px;
   cursor: pointer;
   color: #000000;
-  transition: 0.3s;
+  transition: .3s;
 }
 
 .faq .faq-list i {
@@ -1003,12 +1019,12 @@ section {
 
 .faq .faq-list .collapsed .icon-show {
   display: inline-block;
-  transition: 0.6s;
+  transition: .6s;
 }
 
 .faq .faq-list .collapsed .icon-close {
   display: none;
-  transition: 0.6s;
+  transition: .6s;
 }
 
 /*--------------------------------------------------------------
@@ -1070,7 +1086,7 @@ section {
   background: #001234;
   background-image: url("../img/bg/footer.png");
   background-position: top;
-  color: #fff;
+  color: #FFFFFF;
   font-size: 14px;
   padding-top: 30px;
 }
@@ -1093,13 +1109,13 @@ section {
 }
 
 #footer h3 span {
-  color: #51d9ff;
+  color: #A755FF;
 }
 
 #footer h4 {
   font-size: 16px;
   font-weight: 600;
-  color: #fff;
+  color: #FFFFFF;
   position: relative;
   margin: 20px 0 10px 0;
 }
@@ -1109,14 +1125,14 @@ section {
   line-height: 24px;
   margin-bottom: 0;
   font-family: "Raleway", sans-serif;
-  color: #fff;
+  color: #FFFFFF;
 }
 
 #footer .social-links a {
   font-size: 18px;
   display: inline-block;
   background: #292929;
-  color: #fff;
+  color: #FFFFFF;
   line-height: 1;
   padding: 8px 0;
   margin-right: 4px;
@@ -1124,11 +1140,11 @@ section {
   text-align: center;
   width: 36px;
   height: 36px;
-  transition: 0.3s;
+  transition: .3s;
 }
 
 #footer .social-links a:hover {
-  background: #51d9ff;
+  background: #A755FF;
   color: #151515;
   text-decoration: none;
 }
@@ -1141,7 +1157,7 @@ section {
 
 #footer ul i {
   padding-right: 2px;
-  color: #51d9ff;
+  color: #A755FF;
   font-size: 18px;
   line-height: 1;
 }
@@ -1157,19 +1173,19 @@ section {
 }
 
 #footer ul a {
-  color: #fff;
-  transition: 0.3s;
+  color: #FFFFFF;
+  transition: .3s;
   display: inline-block;
   line-height: 1;
 }
 
 #footer ul a:hover {
-  color: #51d9ff;
+  color: #A755FF;
 }
 
 #footer .footer-newsletter form {
   margin-top: 30px;
-  background: #fff;
+  background: #FFFFFF;
   padding: 6px 10px;
   position: relative;
   border-radius: 4px;
@@ -1190,9 +1206,9 @@ section {
   background: none;
   font-size: 16px;
   padding: 0 20px;
-  background: #51d9ff;
+  background: #A755FF;
   color: #151515;
-  transition: 0.3s;
+  transition: .3s;
   border-radius: 0 4px 4px 0;
 }
 
@@ -1207,5 +1223,5 @@ section {
 #footer .credits {
   text-align: center;
   font-size: 13px;
-  color: #fff;
+  color: #FFFFFF;
 }
