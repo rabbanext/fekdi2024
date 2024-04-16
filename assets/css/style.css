@@ -30,6 +30,45 @@ h6 {
   font-weight: 600;
 }
 
+.btn-primary {
+  --bs-btn-color: #FFFFFF;
+  --bs-btn-bg: #A144FF;
+  --bs-btn-border-color: #A144FF;
+  
+  --bs-btn-hover-color: #FFFFFF;
+  --bs-btn-hover-bg: #A755FF;
+  --bs-btn-hover-border-color: #A755FF;
+  --bs-btn-focus-shadow-rgb: 49, 132, 253;
+
+  --bs-btn-active-color: #FFFFFF;
+  --bs-btn-active-bg: #9531FF;
+  --bs-btn-active-border-color: #9531FF;
+  --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+
+  padding: 5px 30px;
+  font-weight: 900;
+}
+
+.btn-outline-primary {
+  --bs-btn-color: #A144FF;
+  --bs-btn-bg: none;
+  --bs-btn-border-color: #A144FF;
+  
+  --bs-btn-hover-color: #FFFFFF;
+  --bs-btn-hover-bg: #A755FF;
+  --bs-btn-hover-border-color: #A755FF;
+  --bs-btn-focus-shadow-rgb: 49, 132, 253;
+
+  --bs-btn-active-color: #FFFFFF;
+  --bs-btn-active-bg: #9531FF;
+  --bs-btn-active-border-color: #9531FF;
+  --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+
+  padding: 5px 30px;
+  font-weight: 900;
+  border-width: 2px;
+}
+
 /*--------------------------------------------------------------
 # Back to top button
 --------------------------------------------------------------*/
@@ -64,7 +103,7 @@ h6 {
 }
 
 .back-to-top:hover i {
-  color: #A755FF;
+  color: #A144FF;
 }
 
 .back-to-top.active {
@@ -184,32 +223,6 @@ h6 {
 @media (max-width: 768px) {
   #header .logo img {
     max-height: 20px;
-  }
-}
-
-/*--------------------------------------------------------------
-#  Get Started Button
---------------------------------------------------------------*/
-.get-started-btn {
-  color: #FFFFFF;
-  border-radius: 4px;
-  padding: 7px 25px 8px 25px;
-  white-space: nowrap;
-  transition: .3s;
-  font-size: 14px;
-  display: inline-block;
-  border: 2px solid #A755FF;
-}
-
-.get-started-btn:hover {
-  background: #38c0ff;
-  color: #343A40;
-}
-
-@media (max-width: 992px) {
-  .get-started-btn {
-    padding: 7px 20px 8px 20px;
-    margin-right: 15px;
   }
 }
 
@@ -479,7 +492,7 @@ h6 {
 #hero .hero-vr{
   position: relative;
   max-width: 90vw;
-  margin-top: 40px;
+  margin-top: 20px;
 }
 
 #hero .hero-vr-bg{
@@ -625,7 +638,7 @@ section {
 
 .section-content {
   padding: 25px 20px;
-  background: rgba(255, 255, 255, .05);
+  background: rgba(255, 255, 255, .1);
   box-shadow: 0 8px 32px 0 rgba(116, 50, 187, .4);
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
@@ -802,13 +815,8 @@ section {
   margin-bottom: 40px;
 }
 
-.problem-statements h3 {
-  font-weight: 700;
-}
-
 .problem-statements h4 {
   font-weight: 700;
-  margin-bottom: 0;
 }
 
 .problem-statements h5:hover {
@@ -823,6 +831,7 @@ section {
 
 .problem-statements .scope-of-work {
   overflow-x: scroll;
+  margin-bottom: 10px;
 }
 
 .problem-statements .icon-show {
