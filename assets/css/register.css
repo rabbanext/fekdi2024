@@ -47,3 +47,7 @@
   cursor: pointer;
   color: #000;
 }
+
+.form-floating > label {
+  color: #727272;
+}
