@@ -105,7 +105,7 @@
               <div class="col-12 col-lg-6">
                 <div class="form-floating mb-2">
                   <input type="text" class="form-control" id="asal" placeholder="Jakarta" required>
-                  <label for="asal">Asal Instansi/Organisasi/Komunitas</label>
+                  <label for="asal">Institution/Organization/Community</label>
                 </div>
               </div>
             </div>
@@ -151,7 +151,7 @@
             </div>
             <div class="form-group mt-3">
               <label for="mockup">
-                Mockup PDF
+                Prototype PDF
                 <a href="#" class="badge badge-pill badge-info bg-primary">
                   <strong>(Download Format PDF)</strong>
                 </a>
@@ -263,10 +263,10 @@
                     <label for="name">Name</label>
                   </div>
                   <div class="form-floating mb-2">
-                    <input type="text" class="form-control" id="domisili" placeholder="Jakarta" required>
-                    <label for="domisili">Domisili</label>
+                    <input type="text" class="form-control" id="domicile" placeholder="Jakarta" required>
+                    <label for="domicile">Domicile</label>
                   </div>
-                  <div class="form-floating">
+                  <div class="form-floating mb-2">
                     <input type="date" class="form-control" id="date-birth" required>
                     <label for="date-birth">Date of Birth</label>
                   </div>
@@ -275,8 +275,8 @@
                   <div class="form-floating mb-2">
                     <select name="member_role[]" class="form-control" id="role" required>
                       <option value="">Select Role</option>
-                      <option value="member">Ketua</option>
-                      <option value="head">Anggota</option>
+                      <option value="leader">Group Leader</option>
+                      <option value="member">Member</option>
                     </select>
                     <label for="role">Role</label>
                   </div>
@@ -286,7 +286,7 @@
                   </div>
                   <div class="form-floating mb-2">
                     <input type="text" class="form-control" id="job" placeholder="Software Engineer" required>
-                    <label for="job">Job</label>
+                    <label for="job">Profession</label>
                   </div>
                 </div>
               </div>
@@ -312,7 +312,7 @@
   <!-- Add link JS -->
   <script>
     document.addEventListener('DOMContentLoaded', function () {
-      var maxLinks = 4;
+      var maxLinks = 9;
       var currentLinks = 0;
 
       document.getElementById('add-link-btn').addEventListener('click', function () {
