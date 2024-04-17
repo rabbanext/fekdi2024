@@ -7,7 +7,7 @@
   <meta property="og:locale" content="id_ID" />
   <meta http-equiv="Cache-control" content="public">
 
-  <meta name="theme-color" content="#323d5a">
+  <meta name="theme-color" content="#2A73AC">
 
   <meta name="author" content="rabbanext" />
   <meta name="description" content="Hackathon Bank Indonesia 2024" />
@@ -52,35 +52,35 @@
 <body>
 
   <!-- ======= Header ======= -->
-  <header id="header" class="fixed-top ">
+  <header id="header" class="fixed-top">
     <div class="container d-flex align-items-center justify-content-lg-between">
 
       <!-- Logo -->
       <div class="nav-logo">
-        <a href="#" class="logo me-2 me-lg-3"><img src="../assets/img/logo-bi.png" alt="" class="img-fluid"></a>
-        <a href="#" class="logo me-lg-0"><img src="../assets/img/logo.png" alt="" class="img-fluid"></a>
+        <a href="../index.html" class="logo me-1 me-lg-3"><img src="../assets/img/logo-bi.png" alt="" class="img-fluid"></a>
+        <a href="../index.html" class="logo me-lg-0"><img src="../assets/img/logo.png" alt="" class="img-fluid"></a>
       </div>
 
       <nav id="navbar" class="navbar order-last order-lg-0 ms-auto">
         <ul>
-          <li><a class="nav-link scrollto" href="../index.html">Home</a></li>
-          <li><a class="nav-link scrollto" href="../index.html#problem-statements">Problem Statement</a></li>
-          <!-- <li><a class="nav-link scrollto" href="../index.html#timeline">Timeline</a></li> -->
+          <li><a class="nav-link scrollto" href="../index.html#about">About</a></li>
+          <li><a class="nav-link scrollto" href="../index.html#timeline">Timeline</a></li>
+          <li><a class="nav-link scrollto" href="../index.html#problem-statements">Problem Statements</a></li>
           <li><a class="nav-link scrollto" href="../index.html#prizes">Prizes</a></li>
           <!-- <li><a class="nav-link scrollto" href="../index.html#">Registration</a></li> -->
-          <!-- <li><a class="nav-link scrollto" href="../index.html#faq">FAQ</a></li> -->
+          <li><a class="nav-link scrollto" href="../index.html#faq">FAQ</a></li>
         </ul>
         <i class="bi bi-list mobile-nav-toggle"></i>
       </nav><!-- .navbar -->
 
-      <!-- <a href="index.html" class="get-started-btn scrollto ms-4">Register</a> -->
+      <a href="#" class="btn btn-primary ms-4">Register</a>
 
     </div>
   </header><!-- End Header -->
 
   <main id="main">
 
-    <!-- ======= Problem Statements Section ======= -->
+    <!-- ======= Register Section ======= -->
     <section id="register" class="register">
       <div class="container" data-aos="zoom-in">
         <div class="section-title mt-5">
@@ -92,7 +92,7 @@
           <form action="" method="post" role="form" class="bg-none" id="registration-form"
             enctype="multipart/form-data">
             <div class="row">
-              <div class="col-6">
+              <div class="col-12 col-lg-6">
                 <div class="form-floating mb-2">
                   <input type="text" class="form-control" id="name" placeholder="Rabbani" required>
                   <label for="name">Team Name</label>
@@ -102,7 +102,7 @@
                   <label for="url">LinkedIn URL</label>
                 </div>
               </div>
-              <div class="col-6">
+              <div class="col-12 col-lg-6">
                 <div class="form-floating mb-2">
                   <input type="text" class="form-control" id="asal" placeholder="Jakarta" required>
                   <label for="asal">Asal Instansi/Organisasi/Komunitas</label>
@@ -172,7 +172,7 @@
         </div>
       </div>
     </section>
-    <!-- End Problem Statements Section -->
+    <!-- End Register Section -->
 
   </main><!-- End #main -->
 
@@ -257,7 +257,7 @@
           newMemberDiv.innerHTML = `
             <div class="mb-3 section-content p-2">
               <div class="row">
-                <div class="col-6">
+                <div class="col-12 col-lg-6">
                   <div class="form-floating mb-2">
                     <input type="text" class="form-control" id="name" placeholder="Rabbani" required>
                     <label for="name">Name</label>
@@ -271,7 +271,7 @@
                     <label for="date-birth">Date of Birth</label>
                   </div>
                 </div>
-                <div class="col-6">
+                <div class="col-12 col-lg-6">
                   <div class="form-floating mb-2">
                     <select name="member_role[]" class="form-control" id="role" required>
                       <option value="">Select Role</option>
