@@ -676,6 +676,7 @@ section {
 --------------------------------------------------------------*/
 .timeline {
   background-color: #1367A6;
+  color: #FFFFFF;
   background: url("../img/bg/line-wave.png"), #1367A6;
   background-repeat: no-repeat;
   background-attachment: fixed;
@@ -697,8 +698,7 @@ section {
 .timeline-item-active {
   padding: 3em 2em 2em;
   position: relative;
-  color: #000000;
-  border-left: 4px solid #000000;
+  border-left: 4px solid #FFFFFF;
 }
 
 .timeline-item-active::before {
@@ -727,8 +727,8 @@ section {
 .timeline-item {
   padding: 3em 2em 2em;
   position: relative;
-  color: #000000;
-  border-left: 4px solid #000000;
+  color: #FFFFFF;
+  border-left: 4px solid #FFFFFF;
 }
 
 .timeline-item::before {
@@ -746,15 +746,19 @@ section {
   display: block;
   top: 1em;
   position: absolute;
-  left: -9px;
+  left: -9.5px;
   border-radius: 10px;
   content: '';
-  border: 4px solid #000000;
+  border: 4px solid #FFFFFF;
   background: #1367A6;
 }
 
 .timeline-item:last-child {
-  border-image: linear-gradient(to bottom, rgb(0, 0, 0) 40%, rgba(0, 0, 0, 0)) 1 100%;
+  border-image: linear-gradient(to bottom, rgb(255, 255, 255) 40%, rgba(255, 255, 255, 0)) 1 100%;
+}
+
+.timeline-item p {
+  margin-bottom: 0;
 }
 
 /*--------------------------------------------------------------
@@ -990,7 +994,7 @@ section {
   font-weight: 700;
   padding-left: 25px;
   cursor: pointer;
-  color: #000000;
+  color: #FFFFFF;
   transition: .3s;
 }
 
@@ -1015,7 +1019,7 @@ section {
 }
 
 .faq .faq-list .collapsed:hover {
-  color: #000000;
+  color: #FFFFFF;
 }
 
 .faq .faq-list .collapsed .icon-show {
