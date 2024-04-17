@@ -45,7 +45,7 @@ h6 {
   --bs-btn-active-border-color: #9531FF;
   --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
 
-  padding: 5px 30px;
+  padding: 10px 50px;
   font-weight: 900;
 }
 
@@ -64,9 +64,13 @@ h6 {
   --bs-btn-active-border-color: #9531FF;
   --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
 
-  padding: 5px 30px;
+  padding: 10px 50px;
   font-weight: 900;
   border-width: 2px;
+}
+
+.btn-header-primary {
+  padding: 5px 30px;
 }
 
 /*--------------------------------------------------------------
