@@ -64,8 +64,8 @@
       <nav id="navbar" class="navbar order-last order-lg-0 ms-auto">
         <ul>
           <li><a class="nav-link scrollto" href="../index.html#about">About</a></li>
-          <li><a class="nav-link scrollto" href="../index.html#timeline">Timeline</a></li>
           <li><a class="nav-link scrollto" href="../index.html#problem-statements">Problem Statements</a></li>
+          <li><a class="nav-link scrollto" href="../index.html#timeline">Timeline</a></li>
           <li><a class="nav-link scrollto" href="../index.html#prizes">Prizes</a></li>
           <!-- <li><a class="nav-link scrollto" href="../index.html#">Registration</a></li> -->
           <li><a class="nav-link scrollto" href="../index.html#faq">FAQ</a></li>
@@ -73,7 +73,9 @@
         <i class="bi bi-list mobile-nav-toggle"></i>
       </nav><!-- .navbar -->
 
-      <a href="#" class="btn btn-primary ms-4">Register</a>
+      <span class="d-inline-block" tabindex="0" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-title="Available from 29 April 2024">
+        <button class="btn btn-primary btn-header-primary ms-4" type="button" disabled>Register</button>
+      </span>
 
     </div>
   </header><!-- End Header -->
@@ -88,9 +90,9 @@
           <p>Register</p>
         </div>
         <!-- <h3>Please Fill The Form:</h3> -->
-        <div class="section-content mb-5">
-          <form action="" method="post" role="form" class="bg-none" id="registration-form"
-            enctype="multipart/form-data">
+        <form action="" method="post" role="form" class="bg-none" id="registration-form"
+          enctype="multipart/form-data">
+          <div class="section-content mb-5">
             <div class="row">
               <div class="col-12 col-lg-6">
                 <div class="form-floating mb-2">
@@ -107,6 +109,15 @@
                   <input type="text" class="form-control" id="asal" placeholder="Jakarta" required>
                   <label for="asal">Institution/Organization/Community</label>
                 </div>
+                <div class="form-group mt-3">
+                  <label for="nda">
+                    Signed NDA (Non-Disclosure Agreement)
+                    <a href="#" class="badge badge-pill badge-info bg-primary">
+                      <strong>(Download NDA)</strong>
+                    </a>
+                  </label>
+                  <input type="file" class="form-control form-control-lg" name="nda" id="nda" accept=".pdf" required>
+                </div>
               </div>
             </div>
 
@@ -117,26 +128,6 @@
             </div>
             <div class="text-center">
               <button class="btn btn-success" type="button" id="add-member-btn">Add Team Member</button>
-            </div>
-
-            <hr />
-            <h5>Solution(s)</h5>
-            <div class="mb-3 section-content p-2">
-              <div class="form-floating mb-3">
-                <input type="text" class="form-control" id="title" placeholder="The H">
-                <label for="title">Title</label>
-              </div>
-              <div class="form-floating">
-                <input type="url" class="form-control" id="github" placeholder="Password">
-                <label for="github">Link (Github/Website/Other Link)</label>
-              </div>
-            </div>
-            
-            <div id="links">
-              <!-- Links will be dynamically added here -->
-            </div>
-            <div class="text-center">
-              <button class="btn btn-success" type="button" id="add-link-btn">Add Link</button>
             </div>
 
             <hr />
@@ -165,11 +156,37 @@
                 <div class="file-preview"></div>
               </div>
             </div>
-            <div class="text-center mt-3">
-              <button class="btn btn-primary" type="submit">Submit</button>
+
+            <hr />
+            <h5>Additional Information</h5>
+            <div class="mb-3 section-content p-2">
+              <div class="row">
+                <div class="col-12 col-lg-6">
+                  <div class="form-floating">
+                    <input type="url" class="form-control" id="github" placeholder="Password">
+                    <label for="github">Link (Github/Website/Other Link)</label>
+                  </div>
+                </div>
+                <div class="col-12 col-lg-6">
+                  <div class="form-floating">
+                    <input type="text" class="form-control" id="title" placeholder="The H">
+                    <label for="title">Description</label>
+                  </div>
+                </div>
+              </div>
             </div>
-          </form>
-        </div>
+            <div id="links">
+              <!-- Links will be dynamically added here -->
+            </div>
+            <div class="text-center">
+              <button class="btn btn-success" type="button" id="add-link-btn">Add Link</button>
+            </div>
+          </div>
+          
+          <div class="text-center">
+            <button class="btn btn-primary" type="submit">Submit</button>
+          </div>
+        </form>
       </div>
     </section>
     <!-- End Register Section -->
@@ -273,8 +290,8 @@
                 </div>
                 <div class="col-12 col-lg-6">
                   <div class="form-floating mb-2">
-                    <select name="member_role[]" class="form-control" id="role" required>
-                      <option value="">Select Role</option>
+                    <select class="form-select" id="role" aria-label="Select Role" name="member_role[]" required>
+                      <option selected>Select Role</option>
                       <option value="leader">Group Leader</option>
                       <option value="member">Member</option>
                     </select>
@@ -321,13 +338,19 @@
           var newLinkDiv = document.createElement('div');
           newLinkDiv.innerHTML = `
             <div class="mb-3 section-content p-2">
-              <div class="form-floating mb-3">
-                <input type="text" class="form-control" id="title" placeholder="The H">
-                <label for="title">Title</label>
-              </div>
-              <div class="form-floating">
-                <input type="url" class="form-control" id="github" placeholder="Password">
-                <label for="github">Link (Github/Website/Other Link)</label>
+              <div class="row">
+                <div class="col-12 col-lg-6">
+                  <div class="form-floating">
+                    <input type="url" class="form-control" id="github" placeholder="Password">
+                    <label for="github">Link (Github/Website/Other Link)</label>
+                  </div>
+                </div>
+                <div class="col-12 col-lg-6">
+                  <div class="form-floating">
+                    <input type="text" class="form-control" id="title" placeholder="The H">
+                    <label for="title">Description</label>
+                  </div>
+                </div>
               </div>
               <div class="col-md-12 text-center mt-2">
                 <button type="button" class="btn btn-danger remove-link-btn">Remove Item</button>

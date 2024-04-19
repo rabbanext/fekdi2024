@@ -63,16 +63,18 @@
         <ul>
           <li><a class="nav-link scrollto" href="#about">About</a></li>
           <li><a class="nav-link scrollto" href="#timeline">Timeline</a></li>
-          <li><a class="nav-link scrollto" href="#problem-statements">Problem Statements</a></li>
           <li><a class="nav-link scrollto" href="#prizes">Prizes</a></li>
+          <li><a class="nav-link scrollto" href="#problem-statements">Problem Statements</a></li>
           <!-- <li><a class="nav-link scrollto" href="#">Registration</a></li> -->
           <li><a class="nav-link scrollto" href="#faq">FAQ</a></li>
         </ul>
         <i class="bi bi-list mobile-nav-toggle"></i>
       </nav><!-- .navbar -->
 
-      <a href="index.html" class="btn btn-primary btn-header-primary ms-4">Register</a>
-
+      <span class="d-inline-block" tabindex="0" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-title="Available from 29 April 2024">
+        <button class="btn btn-primary btn-header-primary ms-4" type="button" disabled>Register</button>
+      </span>
+      
     </div>
   </header><!-- End Header -->
 
@@ -119,7 +121,7 @@
             <p>
               Daftarkan dirimu menjadi bagian dari Kickoff dan Seminar Hackathon 2024, hadiri kegiatan secara online.
             </p>
-            <a href="#" class="btn btn-primary">Register</a>
+            <a href="https://bi-go-id.zoom.us/meeting/register/tJArfu6trzMsH9XjY18GWt9pHbTZgpsi0Mk6#/registration" class="btn btn-primary">Register</a>
           </div>
         </div>
       </div>
@@ -433,25 +435,25 @@
             <p>HADIAH</p>
           </div>
           <div class="row mb-4">
-            <div class="col-12" data-aos="zoom-in" data-aos-delay="100">
+            <div class="col-12 col-md-6 col-lg-3" data-aos="zoom-in" data-aos-delay="100">
               <div class="prize">
                 <img src="assets/img/prizes/juara1.png" width="300" class="img-prize mb-3" alt="">
                 <h3>Rp.200.000.000</h3>
               </div>
             </div>
-            <div class="col-12" data-aos="zoom-in" data-aos-delay="100">
+            <div class="col-12 col-md-6 col-lg-3" data-aos="zoom-in" data-aos-delay="100">
               <div class="prize">
                 <img src="assets/img/prizes/juara2.png" width="300" class="img-prize mb-3" alt="">
                 <h3>Rp.100.000.000</h3>
               </div>
             </div>
-            <div class="col-12" data-aos="zoom-in" data-aos-delay="100">
+            <div class="col-12 col-md-6 col-lg-3" data-aos="zoom-in" data-aos-delay="100">
               <div class="prize">
                 <img src="assets/img/prizes/juara3.png" width="300" class="img-prize mb-3" alt="">
                 <h3>Rp.50.000.000</h3>
               </div>
             </div>
-            <div class="col-12" data-aos="zoom-in" data-aos-delay="100">
+            <div class="col-12 col-md-6 col-lg-3" data-aos="zoom-in" data-aos-delay="100">
               <div class="prize">
                 <img src="assets/img/prizes/juara4.png" width="300" class="img-prize mb-3" alt="">
                 <h3>Rp.15.000.000</h3>
@@ -670,6 +672,8 @@
       class="bi bi-arrow-up-short"></i></a>
 
   <!-- Vendor JS Files -->
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+  <script src="assets/vendor/popper/popper.min.js"></script>
   <script src="assets/vendor/aos/aos.js"></script>
   <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
   <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
@@ -680,6 +684,13 @@
   <!-- Main JS File -->
   <script src="assets/js/main.js"></script>
 
+  <script>
+    /* ---- tooltips config ---- */
+    $(document).ready(function(){
+      $('[data-bs-toggle="tooltip"]').tooltip();
+    });
+  </script>
+  
 </body>
 
 </html>
