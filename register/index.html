@@ -92,16 +92,12 @@
         <!-- <h3>Please Fill The Form:</h3> -->
         <form action="" method="post" role="form" class="bg-none" id="registration-form"
           enctype="multipart/form-data">
-          <div class="section-content mb-5">
+          <div class="section-content">
             <div class="row">
               <div class="col-12 col-lg-6">
                 <div class="form-floating mb-2">
                   <input type="text" class="form-control" id="name" placeholder="Rabbani" required>
                   <label for="name">Team Name</label>
-                </div>
-                <div class="form-floating mb-2">
-                  <input type="text" class="form-control" id="url" placeholder="https://linkedin.com/in/rabbanext/" required>
-                  <label for="url">LinkedIn URL</label>
                 </div>
               </div>
               <div class="col-12 col-lg-6">
@@ -109,18 +105,9 @@
                   <input type="text" class="form-control" id="asal" placeholder="Jakarta" required>
                   <label for="asal">Institution/Organization/Community</label>
                 </div>
-                <div class="form-group mt-3">
-                  <label for="nda">
-                    Signed NDA (Non-Disclosure Agreement)
-                    <a href="#" class="badge badge-pill badge-info bg-primary">
-                      <strong>(Download NDA)</strong>
-                    </a>
-                  </label>
-                  <input type="file" class="form-control form-control-lg" name="nda" id="nda" accept=".pdf" required>
-                </div>
               </div>
             </div>
-
+            
             <hr />
             <h5>Team Members</h5>
             <div id="team-members">
@@ -131,20 +118,41 @@
             </div>
 
             <hr />
-            <div class="form-group mt-3">
-              <label for="nda">
-                Signed NDA (Non-Disclosure Agreement)
-                <a href="#" class="badge badge-pill badge-info bg-primary">
-                  <strong>(Download NDA)</strong>
-                </a>
-              </label>
-              <input type="file" class="form-control" name="nda" id="nda" accept=".pdf" required>
+            <h5>Innovation Proposal</h5>
+            <div class="mb-3 section-content p-2">
+              <div class="row">
+                <div class="col-12 col-lg-4">
+                  <div class="form-floating">
+                    <input type="text" class="form-control" id="title" placeholder="The H">
+                    <label for="title">Proposal Name</label>
+                  </div>
+                </div>
+                <div class="col-12 col-lg-4">
+                  <div class="form-floating">
+                    <input type="url" class="form-control" id="github" placeholder="Password">
+                    <label for="github">Link (Github/Website/Drive/Other Link)</label>
+                  </div>
+                </div>
+                <div class="col-12 col-lg-4">
+                  <div class="form-group mt-1">
+                    <input type="file" class="form-control form-control-lg" name="cv" id="cv" accept=".pdf" required>
+                  </div>
+                </div>
+              </div>
             </div>
+            <div id="links">
+              <!-- Links will be dynamically added here -->
+            </div>
+            <div class="text-center">
+              <button class="btn btn-success d-block" type="button" id="add-link-btn">Add Link</button>
+            </div>
+            
+            <hr />
             <div class="form-group mt-3">
               <label for="mockup">
-                Prototype PDF
+                Signed NDA (Non-Disclosure Agreement)
                 <a href="#" class="badge badge-pill badge-info bg-primary">
-                  <strong>(Download Format PDF)</strong>
+                  <strong>(Download Format NDA)</strong>
                 </a>
               </label>
               <div id="file-upload">
@@ -157,34 +165,9 @@
               </div>
             </div>
 
-            <hr />
-            <h5>Additional Information</h5>
-            <div class="mb-3 section-content p-2">
-              <div class="row">
-                <div class="col-12 col-lg-6">
-                  <div class="form-floating">
-                    <input type="url" class="form-control" id="github" placeholder="Password">
-                    <label for="github">Link (Github/Website/Other Link)</label>
-                  </div>
-                </div>
-                <div class="col-12 col-lg-6">
-                  <div class="form-floating">
-                    <input type="text" class="form-control" id="title" placeholder="The H">
-                    <label for="title">Description</label>
-                  </div>
-                </div>
-              </div>
+            <div class="text-center mt-5">
+              <button class="btn btn-primary" type="submit">Submit</button>
             </div>
-            <div id="links">
-              <!-- Links will be dynamically added here -->
-            </div>
-            <div class="text-center">
-              <button class="btn btn-success" type="button" id="add-link-btn">Add Link</button>
-            </div>
-          </div>
-          
-          <div class="text-center">
-            <button class="btn btn-primary" type="submit">Submit</button>
           </div>
         </form>
       </div>
@@ -264,66 +247,93 @@
   <!-- Add member JS -->
   <script>
     document.addEventListener('DOMContentLoaded', function () {
-      var maxMembers = 4;
-      var currentMembers = 0;
+    var maxMembers = 4;
+    var currentMembers = 0;
+    var addMemberBtn = document.getElementById('add-member-btn');
 
-      document.getElementById('add-member-btn').addEventListener('click', function () {
-        if (currentMembers < maxMembers) {
-          var teamMembersContainer = document.getElementById('team-members');
-          var newMemberDiv = document.createElement('div');
-          newMemberDiv.innerHTML = `
-            <div class="mb-3 section-content p-2">
-              <div class="row">
-                <div class="col-12 col-lg-6">
-                  <div class="form-floating mb-2">
-                    <input type="text" class="form-control" id="name" placeholder="Rabbani" required>
-                    <label for="name">Name</label>
-                  </div>
-                  <div class="form-floating mb-2">
-                    <input type="text" class="form-control" id="domicile" placeholder="Jakarta" required>
-                    <label for="domicile">Domicile</label>
-                  </div>
-                  <div class="form-floating mb-2">
-                    <input type="date" class="form-control" id="date-birth" required>
-                    <label for="date-birth">Date of Birth</label>
-                  </div>
+    function toggleAddMemberButton() {
+      if (currentMembers >= maxMembers) {
+        addMemberBtn.style.display = 'none';
+      } else {
+        addMemberBtn.style.display = 'block';
+      }
+    }
+
+    toggleAddMemberButton();
+
+    addMemberBtn.addEventListener('click', function () {
+      if (currentMembers < maxMembers) {
+        var teamMembersContainer = document.getElementById('team-members');
+        var newMemberDiv = document.createElement('div');
+        newMemberDiv.innerHTML = `
+          <div class="mb-3 section-content p-2">
+            <div class="row">
+              <div class="col-12 col-lg-6">
+                <div class="form-floating mb-2">
+                  <input type="text" class="form-control" id="name" placeholder="Rabbani" required>
+                  <label for="name">Name</label>
                 </div>
-                <div class="col-12 col-lg-6">
-                  <div class="form-floating mb-2">
-                    <select class="form-select" id="role" aria-label="Select Role" name="member_role[]" required>
-                      <option selected>Select Role</option>
-                      <option value="leader">Group Leader</option>
-                      <option value="member">Member</option>
-                    </select>
-                    <label for="role">Role</label>
-                  </div>
-                  <div class="form-floating mb-2">
-                    <input type="tel" class="form-control" id="phone" placeholder="081264046414" required>
-                    <label for="phone">Phone Number</label>
-                  </div>
-                  <div class="form-floating mb-2">
-                    <input type="text" class="form-control" id="job" placeholder="Software Engineer" required>
-                    <label for="job">Profession</label>
-                  </div>
+                <div class="form-floating mb-2">
+                  <input type="text" class="form-control" id="domicile" placeholder="Jakarta" required>
+                  <label for="domicile">Domicile</label>
+                </div>
+                <div class="form-floating mb-2">
+                  <input type="date" class="form-control" id="date-birth" required>
+                  <label for="date-birth">Date of Birth</label>
+                </div>
+                <div class="form-floating mb-2">
+                  <input type="url" class="form-control" id="linkedin-member-url" placeholder="Software Engineer" required>
+                  <label for="linkedin-member-url">LinkedIn URL</label>
                 </div>
               </div>
-              <div class="col-md-12 text-center mt-2">
-                <button type="button" class="btn btn-danger remove-member-btn">Remove Member</button>
-              </div>
+              <div class="col-12 col-lg-6">
+                <div class="form-floating mb-2">
+                  <select class="form-select" id="role" aria-label="Select Role" name="member_role[]" required>
+                    <option selected>Select Role</option>
+                    <option value="leader">Group Leader</option>
+                    <option value="member">Member</option>
+                  </select>
+                  <label for="role">Role</label>
+                </div>
+                <div class="form-floating mb-2">
+                  <input type="email" class="form-control" id="email" placeholder="081264046414" required>
+                  <label for="email">Email</label>
+                </div>
+                <div class="form-floating mb-2">
+                  <input type="text" class="form-control" id="job" placeholder="Software Engineer" required>
+                  <label for="job">Profession</label>
+                </div>
+                <div class="form-floating mb-2">
+                  <input type="url" class="form-control" id="github-member-url" placeholder="Software Engineer" required>
+                  <label for="github-member-url">GitHub URL</label>
+                </div>
+                </div>
+                <div class="form-group">
+                  <label for="cv">
+                    CV
+                  </label>
+                  <input type="file" class="form-control" name="cv" id="cv" accept=".pdf" required>
+                </div>
             </div>
-          `;
-          teamMembersContainer.appendChild(newMemberDiv);
-          currentMembers++;
-        }
-      });
-
-      document.getElementById('team-members').addEventListener('click', function (e) {
-        if (e.target.classList.contains('remove-member-btn')) {
-          e.target.parentElement.parentElement.remove();
-          currentMembers--;
-        }
-      });
+            <div class="col-md-12 text-center mt-2">
+              <button type="button" class="btn btn-danger remove-member-btn">Remove Member</button>
+            </div>
+          </div>
+        `;
+        teamMembersContainer.appendChild(newMemberDiv);
+        currentMembers++;
+        toggleAddMemberButton();
+      }
     });
+
+    document.getElementById('team-members').addEventListener('click', function (e) {
+      if (e.target.classList.contains('remove-member-btn')) {
+        e.target.parentElement.parentElement.remove();
+        currentMembers--;
+        toggleAddMemberButton();
+      }
+    });
+  });
   </script>
 
   <!-- Add link JS -->
@@ -339,16 +349,21 @@
           newLinkDiv.innerHTML = `
             <div class="mb-3 section-content p-2">
               <div class="row">
-                <div class="col-12 col-lg-6">
-                  <div class="form-floating">
-                    <input type="url" class="form-control" id="github" placeholder="Password">
-                    <label for="github">Link (Github/Website/Other Link)</label>
-                  </div>
-                </div>
-                <div class="col-12 col-lg-6">
+                <div class="col-12 col-lg-4">
                   <div class="form-floating">
                     <input type="text" class="form-control" id="title" placeholder="The H">
-                    <label for="title">Description</label>
+                    <label for="title">Proposal Name</label>
+                  </div>
+                </div>
+                <div class="col-12 col-lg-4">
+                  <div class="form-floating">
+                    <input type="url" class="form-control" id="github" placeholder="Password">
+                    <label for="github">Link (Github/Website/Drive/Other Link)</label>
+                  </div>
+                </div>
+                <div class="col-12 col-lg-4">
+                  <div class="form-group mt-1">
+                    <input type="file" class="form-control form-control-lg" name="cv" id="cv" accept=".pdf" required>
                   </div>
                 </div>
               </div>
